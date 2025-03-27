@@ -43,9 +43,17 @@ const tasks = [
     <!-- Botón rojo -->
     <button class="big-red-button" id="helloButton">Haz clic aquí</button>
 
+    <! -- Botón BENITO -->
+    <button class="big-red-button" id="holaBenito"> Benito's Button</button>
+
+    <!-- Mensaje "BENITO" -->
+    <div id="messageBenito" class="message" style="display: none;">
+      Hola DICE BENITOOO!
+    </div>
+
     <!-- Mensaje "Hola, mundo" -->
     <div id="messageContainer" class="message" style="display: none;">
-      ¡Hola, mundo!
+      Hola, mundo!
     </div>
 
     <!-- Script para manejar el clic del botón -->
@@ -53,8 +61,15 @@ const tasks = [
       const button = document.getElementById("helloButton");
       const messageContainer = document.getElementById("messageContainer");
 
+      const buttonBenito = document.getElementById("holaBenito");
+      const messageBenito = document.getElementById("messageBenito");
+
       button.addEventListener("click", () => {
         messageContainer.style.display = "block"; // Muestra el mensaje
+      });
+
+      buttonBenito.addEventListener("click", () => {
+        messageBenito.style.display = "block"; // Muestra el mensaje
       });
     </script>
   </body>
